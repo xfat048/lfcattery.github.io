@@ -171,10 +171,13 @@
         </div>
         <div class="row mb-5 justify-content-center">
           <div class="col-md-6">
+<<<<<<< HEAD
             <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
               <strong>Terima kasih!</strong> Pesan anda sudah kami terima.
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+=======
+>>>>>>> c67f21241dfc66dc9971b27d93937efbf487cc0b
             <form name="lfcattery-contact-form">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama</label>
@@ -221,6 +224,7 @@
   <script>
     const scriptURL = "https://script.google.com/macros/s/AKfycbwZNayCUpesVVvOmi2POGoS60LIyQus2URxAQvqSFyB1dkHgmyU9aIUOyQoV5asxbEgpg/exec";
     const form = document.forms["lfcattery-contact-form"];
+<<<<<<< HEAD
     const btnKirim = document.querySelector(".btn-kirim");
     const btnLoading = document.querySelector(".btn-loading");
     const myAlert = document.querySelector(".my-alert");
@@ -243,6 +247,13 @@
           form.reset();
           console.log("Success!", response);
         })
+=======
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => console.log("Success!", response))
+>>>>>>> c67f21241dfc66dc9971b27d93937efbf487cc0b
         .catch((error) => console.error("Error!", error.message));
     });
   </script>
